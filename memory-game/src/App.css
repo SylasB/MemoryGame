@@ -1,0 +1,12 @@
+.App {
+}
+
+.cardImg {
+  border: 2px solid black;
+  height: 10vh;
+}
+
+.cardContainer {
+  border: 2px solid red;
+  height: 50vh;
+}
