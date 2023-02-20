@@ -15,15 +15,12 @@ function Header(props) {
             </div>
             <div className="scoreBoard">
                 <div>
-                    Score: {score}
-                </div>
-                <div>
+                    Score: {score} <br/>
+                {/* </div>
+                <div> */}
                     HighScore: {highScore}
                 </div>
             </div>  
-            <div>
-                {text}
-            </div>
         </div>
     );
 }

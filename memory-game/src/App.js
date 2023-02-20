@@ -61,18 +61,22 @@ function App() {
 
   return (
     <div className="App">
+      <header>
         <Header 
           score = {score}
           highScore = {highScore}
           text = {text}
           />
+          
+      </header>
+        
         <CardContainer 
         score = {score}
         highScore = {highScore}
         gameLogic = {gameLogic}
         />
-        <p>
-          <a href='https://github.com/SylasB/MemoryGame'>Copyright Sylas Boniek 2023</a>
+        <p id='copyright'>
+          <a href='https://github.com/SylasB/MemoryGame' target='_blank'>Copyright Sylas Boniek 2023</a>
         </p>
     </div>
   );

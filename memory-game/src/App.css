@@ -1,4 +1,41 @@
+body {
+  background-image: url(../public/pictures/Animus-Logo.webp);
+  background-size: cover;
+}
+
 .App {
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 0.5vw;
+  font-size: x-large;
+  margin: 1vw;
+  width: 45vw;
+  font-weight: 700;
+}
+
+.scoreBoard {
+  display: flex;
+  align-items: center;
+  margin: 1vw;
+  padding: 1vw;
+  border-radius: 0.5vw;
+  background-color: lightblue;
+  font-size: x-large;
+  border: 2px solid black;
+}
+
+.card {
+  margin: 1vw;
+  padding: 1vw;
 }
 
 .cardImg {
@@ -7,6 +44,34 @@
 }
 
 .cardContainer {
-  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50vh;
+}
+
+.cardImgContainer {
+  height: 80%;
+  width: 96%;
+  border: 5px outset rgb(240, 178, 22);
+}
+
+.cardName {
+  border: 2px solid black;
+  text-align: center;
+}
+
+#copyright {
+  display: flex;
+  justify-content: center;
+}
+
+#copyright a {
+  color: black;
+  text-decoration: none;
+}
+
+#copyright a::after {
+  color: black;
+  text-decoration: none;
 }

@@ -9,17 +9,31 @@ function CardContainer(props) {
     const generateDeck = () => {
         let numOfCards = data.cards.length;
         let generatedCards = [];
-        for (let i=0; i < 5; i++) {
+        // for (let i=0; i < 5; i++) 
+        // {
+        //     let randomId = Math.floor(Math.random() * numOfCards);
+        //     while (generatedCards.includes(data.cards[randomId])) 
+        //     {
+        //         randomId = Math.floor(Math.random() * numOfCards);
+        //     }
+        //     if (!data.cards[randomId].chosen) 
+        //     {
+        //         validContainer = true;
+        //     } 
+            
+        // }
+        for (let i=0; i<5; i++)
+        {
             let randomId = Math.floor(Math.random() * numOfCards);
-            while (generatedCards.includes(data.cards[randomId])) 
+            while (generatedCards.includes(data.cards[randomId])) //Generates a unique ID so a card doesn't appear twice in the array
             {
                 randomId = Math.floor(Math.random() * numOfCards);
             }
-            if (!data.cards[randomId].chosen) 
+            if (!data.cards[randomId].chosen)
             {
-                validContainer = true;
-            } 
-            generatedCards = [...generatedCards, data.cards[randomId]];
+                validContainer=true;
+            }
+            generatedCards = [...generatedCards,data.cards[randomId]];
         }
         if (validContainer) 
         {
@@ -36,32 +50,35 @@ function CardContainer(props) {
     const correctGeneratedCards = (cards) => {
         const unchosenCards = data.cards.filter(card => !card.chosen);
         if (unchosenCards === []) {
-            return [];
+            return [ ];
         } 
         cards[Math.floor(Math.random() * cards.length)] = unchosenCards[Math.floor(Math.random() * unchosenCards.length)];
         return cards;
+
     };
 
-    const [ displayCards, setDisplayCards ] = useState([]);
+    const [ displayCards, setDisplayCards ] = useState([ ]);
 
     useEffect(() => {
         const newCards = generateDeck();
-        if (newCards !== [ ]) {
+        if (newCards !== [ ]) 
+        {
             setDisplayCards(newCards);
-            console.log(displayCards);
-        } else {
-            console.log('Test')
+        }
+         else 
+        {
+            alert("You've Won!!!");
         }
     }, [score, highScore]);
 
 
     return (
       <div className='cardContainer'>
-
-          {displayCards.map((card) => (
+          {displayCards.map((item) => (
               <Card  
-              key = {card.id}
-              name = {card.title}
+              key = {item.id}
+              name = {item.title}
+              picture = {item.picture}
               gameLogic = {gameLogic}
               />
           ))}

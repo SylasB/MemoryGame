@@ -1,19 +1,20 @@
 import React from "react";
 
+
 function Card(props) {
     const { name, picture, gameLogic } = props;
     return (
-        <div>
-            <div>
+        <div className="card">
+            <div className="cardImgContainer">
                 <img
+                    src={process.env.PUBLIC_URL+picture}
                     className="cardImg"
-                    alt={name}
+                    //alt={name}
                     onClick={gameLogic.bind(this, name)}
-                > </img>
+                ></img>
             </div>
-            <div className="cardName">
+            <div className="cardName" onClick={gameLogic.bind(this, name)}>
                 {name}
-                TESTING
             </div>
         </div>
     );
