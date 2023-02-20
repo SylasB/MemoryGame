@@ -9,11 +9,11 @@ function Card(props) {
                 <img
                     src={process.env.PUBLIC_URL+picture}
                     className="cardImg"
-                    //alt={name}
+                    alt={name}
                     onClick={gameLogic.bind(this, name)}
                 ></img>
             </div>
-            <div className="cardName" onClick={gameLogic.bind(this, name)}>
+            <div className="cardName">
                 {name}
             </div>
         </div>

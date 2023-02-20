@@ -5,13 +5,13 @@ function Header(props) {
     return (
         <div className='header'>
             <div>
-                <h1>Memory Game</h1>
+                <h1>Assassin's Creed Memory Game</h1>
                 <p>
                 Don't choose the same card twice!
                 </p>
-                <p>
+                {/* <p>
                     {text}
-                </p>
+                </p> */}
             </div>
             <div className="scoreBoard">
                 <div>
